@@ -4,7 +4,7 @@ This is a solution to RSNA Intracranial Hemorrhage Detection Competition on [kag
 
 ### Data
 
-Dataset can be downloaded from [https://www.kaggle.com/c/rsna-intracranial-hemorrhage-detection/data]
+Dataset can be downloaded from https://www.kaggle.com/c/rsna-intracranial-hemorrhage-detection/data
 
 ### References
 - Windowing functions for pre-processed data taken from [https://www.kaggle.com/omission/eda-view-dicom-images-with-correct-windowing]
