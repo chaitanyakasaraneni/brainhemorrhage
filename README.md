@@ -25,22 +25,22 @@ In this project, prior to ResNext, windowing functions were employed to preproce
 The input image is of size 224x224, randomly cropped from a resized image using the scale and aspect ratio augmentation. Downsampling of conv3, 4, and 5 is done by stride-2 convolutions in the 3×3 layer of the first block in each stage, as suggested in [11]. SGD with a mini-batch size of 256 on 8 GPUs (32 per GPU) is used. The weight decay is 0.0001 and the momentum is 0.9. Tested starting from learning rate of 0.1 and divided it by 10 for three times using the schedule in [11]. The weight initialization of [12] was adopted. In all ablation comparisons, the error on the single 224×224 center crop from an image whose shorter side is 256 was evaluated.
 
 ### Output:
-•Id - An image Id. Each Id corresponds to a unique image and will contain an underscore with hemorrhage subtype after the underscore.
+•Id - An image Id. Each Id corresponds to a unique image and will contain an underscore with hemorrhage subtype after the underscore. <br>
 •Label - The probability of whether that sub-type of hemorrhage (or any hemorrhage in the case of any) exists in the indicated image.
 
 ### References:
-[1] N.J. Fischbein, C.A.C. Wijma, "Nontraumatic intracranial hemorrhage", Neuroimaging Clin N Am, vol. 20, no. 4, pp. 469-492, 2010
-[2] D.K. Nishijima, S.R. Offerman, D.W. Ballard, S Zehtabchi et al., "Risk of traumatic intracranial hemorrhage in patients with head injury and preinjury Warfarin or Clopidogrel use", Acad Emerg Med, vol. 20, no. 2, pp. 140-145, 2013
-[3] S. Sacco, C. Marini, D. Toni, L. Olivieri, A. Carolei, "Incidence and 10-year survival of intracerebral hemorrhage in a population-based registry", Stroke, vol. 40, no. 2, pp. 394-399, 2009
-[4] D.B. Zahuranec, N.R. Gonzales, D.L. Brown et al., "Presentation of intracerebral haemorrhage in a community", J Neurol Neurosurg Psychiatry, vol. 77, no. 3, pp. 340-344, 2005
-[5] J.C. Hemphill, S.M. Greenberg, C.S. Anderson et al., "Guidelines for the management of spontaneous intracerebral hemorrhage", Stroke, vol. 46, no. 7, pp. 2032-2060, 2015.
-[6] T. Chan, "Computer aided detection of small acute intracranial hemorrhage on computer tomography of brain", Comput Med Imaging Graph, vol. 31, no. 4, pp. 285-298, 2007.
-[7] W.L Nowinski et al., "Characterization of interventricular and intracerebral intracranial hemorrhages in non-contrast CT", Neuroradiology J., vol. 27, pp. 299-315, 2014.
-[8] T. Chan, H. Kuang, "Effect of a computer-aided diagnosis system on clinician’s performance in detection of small acute intracranial hemorrhage on computed tomography", Acad Radiol, vol. 15, pp. 290-299, 2008.
-[9] S. Xie, R. Girshick, P. Dollár, Z. Tu and K. He, "Aggregated Residual Transformations for Deep Neural Networks," 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Honolulu, HI, 2017, pp. 5987-5995.
-[10] https://github.com/NVIDIA/apex
-[11] S. Gross, M. Wilber, Training and investigating Residual Nets, 2016, [online] Available: https://github.com/facebook/fb.resnet.torch.
-[12] K. He, X. Zhang, S. Ren, J. Sun, "Delving deep into rectifiers: Surpassing human-level performance on ima-genet classification", ICCV, 2015.
+1. N.J. Fischbein, C.A.C. Wijma, "Nontraumatic intracranial hemorrhage", Neuroimaging Clin N Am, vol. 20, no. 4, pp. 469-492, 2010
+2. D.K. Nishijima, S.R. Offerman, D.W. Ballard, S Zehtabchi et al., "Risk of traumatic intracranial hemorrhage in patients with head injury and preinjury Warfarin or Clopidogrel use", Acad Emerg Med, vol. 20, no. 2, pp. 140-145, 2013
+3. S. Sacco, C. Marini, D. Toni, L. Olivieri, A. Carolei, "Incidence and 10-year survival of intracerebral hemorrhage in a population-based registry", Stroke, vol. 40, no. 2, pp. 394-399, 2009
+4. D.B. Zahuranec, N.R. Gonzales, D.L. Brown et al., "Presentation of intracerebral haemorrhage in a community", J Neurol Neurosurg Psychiatry, vol. 77, no. 3, pp. 340-344, 2005
+5. J.C. Hemphill, S.M. Greenberg, C.S. Anderson et al., "Guidelines for the management of spontaneous intracerebral hemorrhage", Stroke, vol. 46, no. 7, pp. 2032-2060, 2015.
+6. T. Chan, "Computer aided detection of small acute intracranial hemorrhage on computer tomography of brain", Comput Med Imaging Graph, vol. 31, no. 4, pp. 285-298, 2007.
+7. W.L Nowinski et al., "Characterization of interventricular and intracerebral intracranial hemorrhages in non-contrast CT", Neuroradiology J., vol. 27, pp. 299-315, 2014.
+8. T. Chan, H. Kuang, "Effect of a computer-aided diagnosis system on clinician’s performance in detection of small acute intracranial hemorrhage on computed tomography", Acad Radiol, vol. 15, pp. 290-299, 2008.
+9. S. Xie, R. Girshick, P. Dollár, Z. Tu and K. He, "Aggregated Residual Transformations for Deep Neural Networks," 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Honolulu, HI, 2017, pp. 5987-5995.
+10. https://github.com/NVIDIA/apex
+11. S. Gross, M. Wilber, Training and investigating Residual Nets, 2016, [online] Available: https://github.com/facebook/fb.resnet.torch.
+12. K. He, X. Zhang, S. Ren, J. Sun, "Delving deep into rectifiers: Surpassing human-level performance on ima-genet classification", ICCV, 2015.
 - Windowing functions for pre-processed data taken from https://www.kaggle.com/omission/eda-view-dicom-images-with-correct-windowing
 - https://www.kaggle.com/taindow/pytorch-efficientnet-b0-benchmark
 - https://www.kaggle.com/taindow/pytorch-resnext-101-32x8d-benchmark
